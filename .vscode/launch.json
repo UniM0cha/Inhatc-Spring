@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-SolsticeShopApplication<solstice_shop>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "kr.inhatc.spring.solstice_shop.SolsticeShopApplication",
+      "projectName": "solstice_shop",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

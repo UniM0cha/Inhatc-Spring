@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "name": "solstice_shop",
+      "path": "solstice_shop"
+    },
+    {
+      "path": "shop-master"
+    }
+  ],
+  "settings": {
+    "java.configuration.updateBuildConfiguration": "automatic"
+  }
+}
