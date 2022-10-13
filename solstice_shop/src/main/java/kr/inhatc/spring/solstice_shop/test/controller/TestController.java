@@ -1,9 +1,6 @@
 package kr.inhatc.spring.solstice_shop.test.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import kr.inhatc.spring.solstice_shop.test.dto.TestDto;
@@ -13,7 +10,7 @@ import kr.inhatc.spring.solstice_shop.test.dto.TestDto;
 public class TestController {
 
   // @RequestMapping(value = "/", method = RequestMethod.GET)
-  @GetMapping("/")
+  @GetMapping("/hello")
   public String hello() {
     return "Hello World!";
   }
