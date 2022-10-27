@@ -10,13 +10,13 @@ import javax.persistence.Id;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import groovy.transform.ToString;
 import kr.inhatc.spring.solstice_shop.member.constant.Role;
 import kr.inhatc.spring.solstice_shop.member.dto.MemberFormDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Getter
