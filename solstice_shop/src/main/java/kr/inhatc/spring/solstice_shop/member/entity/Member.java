@@ -7,9 +7,12 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import kr.inhatc.spring.solstice_shop.cart.entity.Cart;
 import kr.inhatc.spring.solstice_shop.member.constant.Role;
 import kr.inhatc.spring.solstice_shop.member.dto.MemberFormDto;
 import lombok.AllArgsConstructor;

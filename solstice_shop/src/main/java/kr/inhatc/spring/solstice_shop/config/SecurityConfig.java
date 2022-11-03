@@ -25,9 +25,18 @@ public class SecurityConfig {
                 .failureUrl("/member/login/error")
                 .and()
                 .logout()
-                // .logoutUrl("/member/logout")
                 .logoutRequestMatcher(new AntPathRequestMatcher("/member/logout"))
                 .logoutSuccessUrl("/");
+
+        http.authorizeRequests()
+                .mvcMatchers("/css/**", "/js/**").permitAll()
+                .mvcMatchers("/", "/member/**", "/item/**").permitAll()
+                // .mvcMatchers("/admin/**").hasAnyRole("ADMIN")
+                .mvcMatchers("/admin/**").hasRole("ADMIN")
+                .anyRequest().authenticated();
+
+        http.exceptionHandling()
+                .authenticationEntryPoint(new CustomEntryPoint());
 
         return http.build();
     }
