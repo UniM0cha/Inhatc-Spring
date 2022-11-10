@@ -1,4 +1,4 @@
-package kr.inhatc.spring.solstice_shop.order.entity;
+package kr.inhatc.spring.solstice_shop.item.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import kr.inhatc.spring.solstice_shop.item.entity.Item;
 import kr.inhatc.spring.solstice_shop.utils.entity.BaseEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,21 +20,24 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
-public class OrderItem extends BaseEntity {
+public class ItemImg extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "order_item_id")
+    @Column(name = "item_img_id")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id")
-    private Order order;
+    private String imgName;
+    private String oriImgName;
+    private String imgUrl;
+    private String repImgYn;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id")
     private Item item;
 
-    private int orderPrice;
-
-    private int count;
+    public void updateItemImg(String oriImgName, String imgName, String imgUrl) {
+        this.oriImgName = oriImgName;
+        this.imgName = imgName;
+        this.imgUrl = imgUrl;
+    }
 }

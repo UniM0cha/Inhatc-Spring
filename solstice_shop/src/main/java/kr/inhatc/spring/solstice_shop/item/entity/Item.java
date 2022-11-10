@@ -1,7 +1,5 @@
 package kr.inhatc.spring.solstice_shop.item.entity;
 
-import java.time.LocalDateTime;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -12,10 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
 import kr.inhatc.spring.solstice_shop.item.constant.ItemSellStatus;
+import kr.inhatc.spring.solstice_shop.utils.entity.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,7 +25,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Item {
+public class Item extends BaseEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,11 +47,4 @@ public class Item {
   @Lob
   @Column(nullable = false)
   private String itemDetail; // 상품 상세 설명
-
-  @CreationTimestamp
-  private LocalDateTime regTime; // 등록시간
-
-  @UpdateTimestamp
-  private LocalDateTime updateTime; // 수정시간
-
 }
