@@ -1,9 +1,5 @@
 package kr.inhatc.spring.solstice_shop.member.service;
 
-import java.util.Optional;
-
-import javax.persistence.EntityNotFoundException;
-
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

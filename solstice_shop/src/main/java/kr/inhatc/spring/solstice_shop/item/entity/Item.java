@@ -30,21 +30,21 @@ public class Item extends BaseEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "item_id")
-  private Long id; // 상품 코드
+  private Long id;
 
   @Column(nullable = false, length = 50)
-  private String itemNm; // 상품 이름
+  private String itemNm;
 
   @Column(nullable = false)
-  private int price; // 상품 가격
+  private int price;
 
   @Column(nullable = false, name = "number")
-  private int stockNumber; // 재고 수량
+  private int stockNumber;
 
   @Enumerated(EnumType.STRING)
   private ItemSellStatus itemSellStatus;
 
   @Lob
   @Column(nullable = false)
-  private String itemDetail; // 상품 상세 설명
+  private String itemDetail;
 }
